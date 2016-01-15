@@ -1726,9 +1726,9 @@ void hw_epilog_process(void)
     }
     else
     {
-        if (bt_vendor_cbacks)
         {
             ALOGE("vendor lib epilog process aborted [no buffer]");
+            bt_vendor_cbacks->epilog_cb(BT_VND_OP_RESULT_FAIL);
             bt_vendor_cbacks->epilog_cb(BT_VND_OP_RESULT_FAIL);
         }
     }
