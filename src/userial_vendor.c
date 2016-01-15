@@ -1,7 +1,6 @@
 /******************************************************************************
  *
  *  Copyright (C) 2009-2012 Broadcom Corporation
- *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at:
@@ -45,30 +44,6 @@
 
 #if (VNDUSERIAL_DBG == TRUE)
 #define VNDUSERIALDBG(param, ...) {ALOGD(param, ## __VA_ARGS__);}
-#else
-#define VNDUSERIALDBG(param, ...) {}
-#endif
-
-#define VND_PORT_NAME_MAXLEN    256
-
-/******************************************************************************
-**  Local type definitions
-******************************************************************************/
-
-/* vendor serial control block */
-typedef struct
-{
-    int fd;                     /* fd to Bluetooth device */
-    struct termios termios;     /* serial terminal of BT port */
-    char port_name[VND_PORT_NAME_MAXLEN];
-} vnd_userial_cb_t;
-
-/******************************************************************************
-**  Static variables
-******************************************************************************/
-
-static vnd_userial_cb_t vnd_userial;
-static int vnd_userial_force_2stopbits = UART_FORCE_TWO_STOPBITS;
 
 /*****************************************************************************
 **   Helper Functions
