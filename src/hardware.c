@@ -1693,11 +1693,6 @@ void hw_epilog_cback(void *p_mem)
 ** Description      Sample implementation of epilog process
 **
 ** Returns          None
-**
-*******************************************************************************/
-void hw_epilog_process(void)
-{
-    HC_BT_HDR  *p_buf = NULL;
     uint8_t     *p;
 
     BTHWDBG("hw_epilog_process");
@@ -1727,6 +1722,13 @@ void hw_epilog_process(void)
     else
     {
         {
+            ALOGE("vendor lib epilog process aborted [no buffer]");
+            ALOGE("vendor lib epilog process aborted [no buffer]");
+            ALOGE("vendor lib epilog process aborted [no buffer]");
+            ALOGE("vendor lib epilog process aborted [no buffer]");
+            ALOGE("vendor lib epilog process aborted [no buffer]");
+            ALOGE("vendor lib epilog process aborted [no buffer]");
+            ALOGE("vendor lib epilog process aborted [no buffer]");
             ALOGE("vendor lib epilog process aborted [no buffer]");
             bt_vendor_cbacks->epilog_cb(BT_VND_OP_RESULT_FAIL);
             bt_vendor_cbacks->epilog_cb(BT_VND_OP_RESULT_FAIL);
